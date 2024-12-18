@@ -43,4 +43,11 @@ environment = """
 name = "DISCORD_WEBHOOK"
 value = "https://discord.com/api/webhooks/0977431246518568931/bvLFKe_eqSAPf2CjU2-ESYMNFhJ815AvtCI"
 is_secret = false
+
+[[alerter]]
+name = "discord-webhook"
+[alerter.config]
+enabled = true
+endpoint.type = "Custom"
+endpoint.params.url = "http://discord-alerter-ip:7000"
 ```
