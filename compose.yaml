@@ -2,7 +2,7 @@ services:
   komodo-discord-alerter:
     image: foxxmd/komodo-discord-alerter:latest
     restart: unless-stopped
-    environment:
-      - DISCORD_WEBHOOK=${DISCORD_WEBHOOK}
+    env_file:
+      - ./.env
     ports:
       - "7000:7000"
